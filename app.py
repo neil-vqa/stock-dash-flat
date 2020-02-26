@@ -16,6 +16,7 @@ iex_key = 'pk_e682e00599c744d9bb4d6686d4ee7549'
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
 server = app.server
+app.title = 'Market Movers'
 
 data = get_market_gainers(token=iex_key)
 datax = get_market_losers(token=iex_key)
@@ -170,7 +171,7 @@ body = dbc.Container(
 		[
         	dbc.Row([
         		dbc.Col(html.H5("Top 3 Gainers of the Day"),md=9),
-        		dbc.Col(dbc.Button("Refresh Dashboard", id="refresh-button", color="primary"),md=2)
+        		dbc.Col(dbc.Button("Refresh Dashboard", id="refresh-button", href='/', color="primary"),md=2)
         		], align="center", justify="between"),
         	dbc.Row([
         		dbc.Col(html.Div(dcc.Graph(figure=plot1)),lg=4),
