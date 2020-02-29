@@ -44,30 +44,30 @@ body = dbc.Container(
         		dbc.Col(dbc.Button("Refresh Dashboard", id="refresh-button", color="primary"),md=2)
         		], align="center", justify="between"),
         	dbc.Row([
-        		dbc.Col(html.Div(dcc.Graph(id="plot1")),lg=4),
-        		dbc.Col(html.Div(dcc.Graph(id="plot2")),lg=4),
-        		dbc.Col(html.Div(dcc.Graph(id="plot3")),lg=4)
+        		dbc.Col(html.Div(dcc.Graph(id="plot1",config={'displayModeBar': False})),lg=4),
+        		dbc.Col(html.Div(dcc.Graph(id="plot2",config={'displayModeBar': False})),lg=4),
+        		dbc.Col(html.Div(dcc.Graph(id="plot3",config={'displayModeBar': False})),lg=4)
         	], className="mt-3", no_gutters=True),
         	dbc.Row([
-               dbc.Col(html.Div(dcc.Graph(id="plot4")),md=6),
+               dbc.Col(html.Div(dcc.Graph(id="plot4",config={'displayModeBar': False})),md=6),
                dbc.Col([
-               	dbc.Row(dbc.Col(html.Div(dcc.Graph(id="plot5"))),className="mt-3"),
-               	dbc.Row(dbc.Col(html.Div(dcc.Graph(id="plot6"))),className="mt-3")
+               	dbc.Row(dbc.Col(html.Div(dcc.Graph(id="plot5",config={'displayModeBar': False}))),className="mt-3"),
+               	dbc.Row(dbc.Col(html.Div(dcc.Graph(id="plot6",config={'displayModeBar': False}))),className="mt-3")
                ],md=6)
           ], className="mt-3", no_gutters=True, align="center"),
           dbc.Row([
         		dbc.Col(html.H5("Top 3 Losers of the Day"))], className="mt-5"),
           dbc.Row([
-        		dbc.Col(html.Div(dcc.Graph(id="plotA")),lg=4),
-        		dbc.Col(html.Div(dcc.Graph(id="plotB")),lg=4),
-        		dbc.Col(html.Div(dcc.Graph(id="plotC")),lg=4)
+        		dbc.Col(html.Div(dcc.Graph(id="plotA",config={'displayModeBar': False})),lg=4),
+        		dbc.Col(html.Div(dcc.Graph(id="plotB",config={'displayModeBar': False})),lg=4),
+        		dbc.Col(html.Div(dcc.Graph(id="plotC",config={'displayModeBar': False})),lg=4)
         ], className="mt-2", no_gutters=True),
         dbc.Row([
         		dbc.Col(html.H5("Top 3 Most Active of the Day"))], className="mt-4"),
           dbc.Row([
-        		dbc.Col(html.Div(dcc.Graph(id="plotX")),lg=4),
-        		dbc.Col(html.Div(dcc.Graph(id="plotY")),lg=4),
-        		dbc.Col(html.Div(dcc.Graph(id="plotZ")),lg=4)
+        		dbc.Col(html.Div(dcc.Graph(id="plotX",config={'displayModeBar': False})),lg=4),
+        		dbc.Col(html.Div(dcc.Graph(id="plotY",config={'displayModeBar': False})),lg=4),
+        		dbc.Col(html.Div(dcc.Graph(id="plotZ",config={'displayModeBar': False})),lg=4)
         ], className="mt-2", no_gutters=True),
         dbc.Row([
         		dbc.Col(html.H6("nvqa.business@gmail.com | Please contact the developer for any concerns."))], className="mt-5")
