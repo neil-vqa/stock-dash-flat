@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import numpy as np
 from iexfinance.stocks import get_market_most_active
@@ -5,7 +6,7 @@ from iexfinance.stocks import get_market_gainers
 from iexfinance.stocks import get_market_losers
 import yfinance as yf
 
-iex_key = 'pk_e682e00599c744d9bb4d6686d4ee7549'
+iex_key = os.environ.get('IEX_API')
 
 def data_parse():
 	data = get_market_gainers(token=iex_key)
