@@ -70,7 +70,8 @@ body = dbc.Container(
         		dbc.Col(html.Div(dcc.Graph(id="plotZ",config={'displayModeBar': False})),lg=4)
         ], className="mt-2", no_gutters=True),
         dbc.Row([
-        		dbc.Col(html.H6("nvqa.business@gmail.com | Please contact the developer for any concerns."))], className="mt-5")
+        		dbc.Col(html.H6("nvqa.business@gmail.com | Please contact the developer for any concerns. | If charts are not loading, it is due to IEX Cloud updating their database."))
+	], className="mt-5")
         ], fluid=False, className="mt-4")
         
 
