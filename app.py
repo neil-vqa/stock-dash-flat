@@ -40,9 +40,9 @@ navbar = dbc.NavbarSimple(
 body = dbc.Container(
 		[
         	dbc.Row([
-        		dbc.Col(html.H5("Top 3 Gainers of the Day"),md=9),
-        		dbc.Col(dbc.Button("Refresh Dashboard", id="refresh-button", color="primary"),md=2)
-        		], align="center", justify="between"),
+        		dbc.Col(dbc.Button("Refresh Dashboard", id="refresh-button", color="primary"),xs=12,className='col-sm-2 order-sm-12'),
+        		dbc.Col(html.H5("Top 3 Gainers of the Day"),xs=12,className='col-sm-8 order-sm-1'),
+        		], align="center",justify="between"),
         	dbc.Row([
         		dbc.Col(html.Div(dcc.Graph(id="plot1",config={'displayModeBar': False})),lg=4),
         		dbc.Col(html.Div(dcc.Graph(id="plot2",config={'displayModeBar': False})),lg=4),
@@ -71,7 +71,7 @@ body = dbc.Container(
         ], className="mt-2", no_gutters=True),
         dbc.Row([
         		dbc.Col(html.H6("nvqa.business@gmail.com | Please contact the developer for any concerns. | If charts are not loading, it is due to IEX Cloud updating their database."))
-	], className="mt-5")
+        		], className="mt-5")
         ], fluid=False, className="mt-4")
         
 
