@@ -10,7 +10,8 @@ from datetime import datetime
 from pytz import timezone
 
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY],
+		meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}])
 app.title='Market Movers of the Day'
 server = app.server
 
@@ -99,7 +100,7 @@ def update_charts(n_clicks):
 	tz = timezone('EST')
 	date= datetime.now(tz)
 	date_read = str(date)[:19] 
-	date_now = "Trading as of {} Eastern Standard Time |".format(date_read)
+	date_now = "Trading as of {} EST |".format(date_read)
 
 	plot1 = do.Figure(do.Indicator(
 			mode= 'number+delta',
@@ -216,5 +217,4 @@ def update_charts(n_clicks):
 
 
 if __name__=='__main__':
-    app.run_server(debug=True)
-
+    app.run_server(debug=False)
